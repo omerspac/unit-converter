@@ -65,7 +65,8 @@ def convert_unit(value, unit_from, unit_to):
 st.title("Unit Converter")
 
 with st.form(key = "unit_converter_form"):
-    value = st.number_input("Enter the value to convert", value = 1.0)
+    value = st.number_input("Enter the value to convert", min_value = 1.0, step = 1.0)
+    
     unit_from = st.selectbox("Select the unit to convert from", list(conversions.keys()))
     unit_to = st.selectbox("Select the unit to convert to", list(conversions.keys()))
 
